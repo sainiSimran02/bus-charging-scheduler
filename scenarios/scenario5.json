@@ -1,0 +1,26 @@
+{
+    "scenario_name": "Worst case convergence",
+    "config_override": {},
+    "buses": [
+      {"id": "bus-BK-01", "operator": "kpn", "direction": "B->K", "departure_time_min": 0},
+      {"id": "bus-BK-02", "operator": "freshbus", "direction": "B->K", "departure_time_min": 8},
+      {"id": "bus-BK-03", "operator": "flixbus", "direction": "B->K", "departure_time_min": 16},
+      {"id": "bus-BK-04", "operator": "kpn", "direction": "B->K", "departure_time_min": 24},
+      {"id": "bus-BK-05", "operator": "freshbus", "direction": "B->K", "departure_time_min": 32},
+      {"id": "bus-BK-06", "operator": "flixbus", "direction": "B->K", "departure_time_min": 40},
+      {"id": "bus-BK-07", "operator": "kpn", "direction": "B->K", "departure_time_min": 48},
+      {"id": "bus-BK-08", "operator": "freshbus", "direction": "B->K", "departure_time_min": 56},
+      {"id": "bus-BK-09", "operator": "flixbus", "direction": "B->K", "departure_time_min": 64},
+      {"id": "bus-BK-10", "operator": "kpn", "direction": "B->K", "departure_time_min": 72},
+      {"id": "bus-KB-01", "operator": "freshbus", "direction": "K->B", "departure_time_min": 0},
+      {"id": "bus-KB-02", "operator": "flixbus", "direction": "K->B", "departure_time_min": 8},
+      {"id": "bus-KB-03", "operator": "kpn", "direction": "K->B", "departure_time_min": 16},
+      {"id": "bus-KB-04", "operator": "freshbus", "direction": "K->B", "departure_time_min": 24},
+      {"id": "bus-KB-05", "operator": "flixbus", "direction": "K->B", "departure_time_min": 32},
+      {"id": "bus-KB-06", "operator": "kpn", "direction": "K->B", "departure_time_min": 40},
+      {"id": "bus-KB-07", "operator": "freshbus", "direction": "K->B", "departure_time_min": 48},
+      {"id": "bus-KB-08", "operator": "flixbus", "direction": "K->B", "departure_time_min": 56},
+      {"id": "bus-KB-09", "operator": "kpn", "direction": "K->B", "departure_time_min": 64},
+      {"id": "bus-KB-10", "operator": "freshbus", "direction": "K->B", "departure_time_min": 72}
+    ]
+  }

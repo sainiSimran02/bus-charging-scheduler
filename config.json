@@ -1,0 +1,28 @@
+{
+    "route": {
+      "stops": ["Bengaluru", "A", "B", "C", "D", "Kochi"],
+      "segments": [
+        {"from": "Bengaluru", "to": "A", "distance_km": 100},
+        {"from": "A", "to": "B", "distance_km": 120},
+        {"from": "B", "to": "C", "distance_km": 100},
+        {"from": "C", "to": "D", "distance_km": 120},
+        {"from": "D", "to": "Kochi", "distance_km": 100}
+      ]
+    },
+    "constants": {
+      "battery_range_km": 240,
+      "charging_time_min": 25,
+      "speed_kmh": 60
+    },
+    "stations": {
+      "A": {"chargers": 1},
+      "B": {"chargers": 1},
+      "C": {"chargers": 1},
+      "D": {"chargers": 1}
+    },
+    "weights": {
+      "individual_wait": 1.0,
+      "operator_balance": 1.0,
+      "total_network_time": 1.0
+    }
+  }

@@ -1,0 +1,20 @@
+{
+    "scenario_name": "Asymmetric load",
+    "config_override": {},
+    "buses": [
+      {"id": "bus-BK-01", "operator": "kpn", "direction": "B->K", "departure_time_min": 0},
+      {"id": "bus-BK-02", "operator": "freshbus", "direction": "B->K", "departure_time_min": 15},
+      {"id": "bus-BK-03", "operator": "flixbus", "direction": "B->K", "departure_time_min": 30},
+      {"id": "bus-BK-04", "operator": "kpn", "direction": "B->K", "departure_time_min": 45},
+      {"id": "bus-BK-05", "operator": "freshbus", "direction": "B->K", "departure_time_min": 60},
+      {"id": "bus-BK-06", "operator": "flixbus", "direction": "B->K", "departure_time_min": 75},
+      {"id": "bus-BK-07", "operator": "kpn", "direction": "B->K", "departure_time_min": 90},
+      {"id": "bus-BK-08", "operator": "freshbus", "direction": "B->K", "departure_time_min": 105},
+      {"id": "bus-BK-09", "operator": "flixbus", "direction": "B->K", "departure_time_min": 120},
+      {"id": "bus-BK-10", "operator": "kpn", "direction": "B->K", "departure_time_min": 135},
+      {"id": "bus-KB-01", "operator": "freshbus", "direction": "K->B", "departure_time_min": 0},
+      {"id": "bus-KB-02", "operator": "flixbus", "direction": "K->B", "departure_time_min": 35},
+      {"id": "bus-KB-03", "operator": "kpn", "direction": "K->B", "departure_time_min": 70},
+      {"id": "bus-KB-04", "operator": "freshbus", "direction": "K->B", "departure_time_min": 105}
+    ]
+  }
