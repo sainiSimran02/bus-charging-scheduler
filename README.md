@@ -29,12 +29,15 @@ They can also be overridden per scenario using config_override (see Scenario 4).
 
 Example: make operator fairness twice as important
 
-// config.json
-"weights": {
-"individual_wait": 1.0,
-"operator_balance": 2.0, // changed from 1.0 to 2.0
-"total_network_time": 1.0
+```json
+{
+  "weights": {
+    "individual_wait": 1.0,
+    "operator_balance": 2.0, // changed from 1.0 to 2.0
+    "total_network_time": 1.0
+  }
 }
+```
 
 Re-run the scheduler (reload the Streamlit page). The new weight takes effect
 immediately. No code changes needed.
@@ -69,40 +72,46 @@ Adding a rule does NOT require touching the engine core. Just follow three steps
    In config.json, add a key under "weights" (use the class name in lowercase
    with underscores):
 
+   ```json
    "weights": {
    "individual_wait": 1.0,
    "operator_balance": 1.0,
    "total_network_time": 1.0,
    "unnecessary_charge_penalty": 1.0
    }
+   ```
 
    Also update the rule_weight_map dictionary inside Scheduler.**init**:
 
+   ```python
    self.rule_weight_map = {
    "IndividualWaitRule": "individual_wait",
    "OperatorBalanceRule": "operator_balance",
    "TotalNetworkTimeRule": "total_network_time",
    "UnnecessaryChargePenalty": "unnecessary_charge_penalty"
    }
+   ```
 
 That's it. The scheduler now uses your rule, and you can tune its impact by
 changing the weight in config.json.
 
 ## Scenario file format (for reference)
 
+```json
 {
-"scenario_name": "Even spacing",
-"config_override": {}, // optional weight overrides
-"buses": [
-{
-"id": "bus-BK-01",
-"operator": "kpn",
-"direction": "B->K", // B->K = Bengaluru→Kochi, K->B = Kochi→Bengaluru
-"departure_time_min": 0 // minutes after 19:00
+  "scenario_name": "Even spacing",
+  "config_override": {}, // optional weight overrides
+  "buses": [
+    {
+      "id": "bus-BK-01",
+      "operator": "kpn",
+      "direction": "B->K", // B->K = Bengaluru→Kochi, K->B = Kochi→Bengaluru
+      "departure_time_min": 0 // minutes after 19:00
+    }
+    // ...
+  ]
 }
-// ...
-]
-}
+```
 
 To add a new scenario, simply drop a JSON file into the scenarios/ folder —
 the app detects it automatically.
